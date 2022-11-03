@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rimraf lib",
-    "library": "yarn clean && babel src/components --out-dir lib --copy-files"
+    "library": "yarn clean && babel --config-file ./babel.config.js ./src/components --out-dir lib --copy-files"
   },
   "eslintConfig": {
     "extends": [
