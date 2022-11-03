@@ -1,7 +1,7 @@
 {
   "name": "genesis-common-library",
   "version": "0.1.0",
-  "main": "lib/index.js",
+  "main": "lib/index.ts",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -23,7 +23,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rimraf lib",
-    "library": "yarn clean && babel --config-file ./babel.config.js ./src/components --out-dir lib --copy-files"
+    "build:ts": "rm -rf ./dist && tsc",
+    "prepare": "yarn build:ts",
+    "library": "yarn clean && babel --config-file ./babel.config.js ./dist/components --out-dir lib --copy-files"
   },
   "eslintConfig": {
     "extends": [
