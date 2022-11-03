@@ -24,7 +24,6 @@
     "eject": "react-scripts eject",
     "clean": "rimraf lib",
     "build:ts": "rm -rf ./dist && tsc",
-    "prepare": "yarn build:ts",
     "library": "yarn clean && babel --config-file ./babel.config.js ./dist/components --out-dir lib --copy-files"
   },
   "eslintConfig": {
